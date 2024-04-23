@@ -1,0 +1,6 @@
+if SHIELD_NOISYWAFFLE
+
+config ZMK_KEYBOARD_NAME
+    default "NoisyWaffle"
+
+endif

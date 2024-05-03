@@ -60,7 +60,7 @@
                &kp LA(F18)     &kp LA(F19)       &kp LA(F20)     &kp LA(F21)     &kp LA(F22)
                &kp LA(F23)     &kp LA(F24)       &kp LS(F24)     &kp LS(F23)     &kp LS(F22)
                &kp LS(F21)     &kp LC(F22)       &kp LC(F23)     &kp LC(F24)     &kp LC(F15)
-               &tog DEFAULT  &tog LOWER       &none     &mo 1     &mo 2
+               &tog DEFAULT  &tog LOWER       &mo 1     &mo 2     &none
                
             >;
         };

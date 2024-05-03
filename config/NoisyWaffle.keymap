@@ -48,7 +48,7 @@
                &kp LS(F6)    &kp LS(F7)      &kp LS(F8)    &kp LS(F9)    &kp LS(F10)
                &kp LS(F11)     &kp LS(F12)       &kp LS(F13)     &kp LS(F14)     &kp LS(F15)
                &kp LS(F16)     &kp LS(F17)       &kp LS(F18)     &kp LS(F19)     &kp LS(F20)
-               &tog LOWER  &none       &tog RAISE     &none     &none
+               &tog LOWER  &none       &none     &none     &none
                
             >;
         };
@@ -60,7 +60,7 @@
                &kp LA(F18)     &kp LA(F19)       &kp LA(F20)     &kp LA(F21)     &kp LA(F22)
                &kp LA(F23)     &kp LA(F24)       &kp LS(F24)     &kp LS(F23)     &kp LS(F22)
                &kp C_PP     &kp C_NEXT       &kp C_PREV     &none     &none
-               &tog RAISE  &tog LOWER       &mo 1     &mo 2     &kp LA(F4)
+               &tog RAISE  &none       &mo 1     &mo 2     &kp LA(F4)
                
             >;
         };

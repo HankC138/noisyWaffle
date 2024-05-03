@@ -59,8 +59,8 @@
                &kp LA(F13)     &kp LA(F14)       &kp LA(F15)     &kp LA(F16)     &kp LA(F17)
                &kp LA(F18)     &kp LA(F19)       &kp LA(F20)     &kp LA(F21)     &kp LA(F22)
                &kp LA(F23)     &kp LA(F24)       &kp LS(F24)     &kp LS(F23)     &kp LS(F22)
-               &kp LS(F21)     &kp LC(F22)       &kp LC(F23)     &kp LC(F24)     &kp LC(F15)
-               &tog RAISE  &tog LOWER       &mo 1     &mo 2     &none
+               &kp C_PP     &kp C_NEXT       &kp C_PREV     &none     &none
+               &tog RAISE  &tog LOWER       &mo 1     &mo 2     &kp LA(F4)
                
             >;
         };

@@ -12,8 +12,18 @@
 #define DEFAULT 0
 #define LOWER 1
 #define RAISE 2
-#define BLUETOOTH 3
+#define ADJUST 3
+#define BLUETOOTH 4
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        adjust_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -26,7 +36,7 @@
                &kp F6     &kp F7       &kp F8     &kp F9     &kp F10
                &kp F11     &kp F12       &kp F13     &kp F14     &kp F15
                &kp LC(F16)     &kp LC(F17)       &kp LC(F18)     &kp LC(F19)     &kp LC(F20)
-               &tog LOWER    &tog RAISE       &none     &none     &kp LC(F21)
+               &none    &tog LOWER       &tog RAISE     &none     &none
                
             >;
         };
@@ -37,8 +47,8 @@
                &kp LS(F1)    &kp LS(F16)       &kp LS(F17)     &kp LS(F18)     &kp LS(F19)
                &kp LS(F6)    &kp LS(F7)      &kp LS(F8)    &kp LS(F9)    &kp LS(F10)
                &kp LS(F11)     &kp LS(F12)       &kp LS(F13)     &kp LS(F14)     &kp LS(F15)
-               &kp LC(F16)     &kp LC(F17)       &kp LC(F18)     &kp LC(F19)     &kp LC(F20)
-               &out OUT_TOG  &tog RAISE       &none     &none     &kp LC(F21)
+               &kp LS(F16)     &kp LS(F17)       &kp LS(F18)     &kp LS(F19)     &kp LS(F20)
+               &tog DEFAULT  &none       &tog RAISE     &none     &none
                
             >;
         };
@@ -46,11 +56,23 @@
             display-name
                          = "RSE";
             bindings = <
-               &kp F1     &kp F16       &kp F17     &kp F18     &kp F19
-               &kp F6     &kp F7       &kp F8     &kp F9     &kp F10
-               &kp F11     &kp F12       &kp F13     &kp F14     &kp F15
-               &kp LC(F16)     &kp LC(F17)       &kp LC(F18)     &kp LC(F19)     &kp LC(F20)
-               &out OUT_TOG  &tog BLUETOOTH       &none     &none     &kp LC(F21)
+               &kp LA(F13)     &kp LA(F14)       &kp LA(F15)     &kp LA(F16)     &kp LA(F17)
+               &kp LA(F18)     &kp LA(F19)       &kp LA(F20)     &kp LA(F21)     &kp LA(F22)
+               &kp LA(F23)     &kp LA(F24)       &kp LS(F24)     &kp LS(F23)     &kp LS(F22)
+               &kp LS(F21)     &kp LC(F22)       &kp LC(F23)     &kp LC(F24)     &kp LC(F15)
+               &tog DEFAULT  &tog LOWER       &none     &mo 1     &mo 2
+               
+            >;
+        };
+        adjust_layer {
+            display-name
+                         = "ADJ";
+            bindings = <
+               &none     &none       &none     &none     &none
+               &none     &none       &none     &none     &none
+               &none     &none       &none     &none     &none
+               &none     &none       &none     &none     &none
+               &tog DEFAULT  &none       &none     &none     &tog BLUETOOTH
                
             >;
         };
@@ -58,11 +80,11 @@
             display-name
                          = "BTL";
             bindings = <
-               &out OUT_TOG     &kp F16       &kp F17     &kp F18     &bootloader
-               &none    &none       &none     &none     &none
-               &none    &none       &none     &none     &none
+               &tog DEFAULT     &none       &none    &none    &bootloader
                &none    &none       &none     &none     &bt BT_CLR
+               &none    &none       &none     &none     &none
                &bt BT_SEL 0   &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4
+               &none    &none       &none     &none     &none
                
             >;
         };
